@@ -4,12 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { ClerkProvider } from '@clerk/clerk-react'
+
+
+// Import your Publishable Key
+const PUBLISHABLE_KEY = import.meta.env.PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error('Add your Clerk Publishable Key to the .env file')
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </ClerkProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
