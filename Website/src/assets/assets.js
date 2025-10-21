@@ -34,7 +34,7 @@ import exclusiveOfferCardImg3 from "./exclusiveOfferCardImg3.png";
 import addIcon from "./addIcon.svg";
 import dashboardIcon from "./dashboardIcon.svg";
 import listIcon from "./listIcon.svg";
-// import uploadArea from "./uploadArea.svg";
+import uploadArea from "./uploadArea.svg";
 import totalBookingIcon from "./totalBookingIcon.svg";
 import totalRevenueIcon from "./totalRevenueIcon.svg";
 
@@ -69,7 +69,7 @@ export const assets = {
     addIcon,
     dashboardIcon,
     listIcon,
-    // uploadArea,
+    uploadArea,
     totalBookingIcon,
     totalRevenueIcon,
 }
